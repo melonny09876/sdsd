@@ -29,7 +29,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css'
 
 // ** Global css styles
 import '../../styles/globals.css'
-import {ChainId, ThirdwebProvider} from '@thirdweb-dev/react';
+import {ThirdwebProvider} from '@thirdweb-dev/react';
 
 // ** Extend App Props with Emotion
 type ExtendedAppProps = AppProps & {
@@ -55,7 +55,6 @@ if (themeConfig.routingLoader) {
 // ** Configure JSS & ClassName
 const App = (props: ExtendedAppProps) => {
   const {Component, emotionCache = clientSideEmotionCache, pageProps} = props
-  const activeChainId = ChainId.Mainnet;
 
   // Variables
   const getLayout = Component.getLayout ?? (page => <UserLayout>{page}</UserLayout>)
